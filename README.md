@@ -1,6 +1,6 @@
 ## 描述
 * 基于Pocsuite3框架
-* 所有的POC都使用python3从新编写 
+* 所有的POC都使用python3从新编写或修改
 * 部分POC并未有环境进行测试
 * 所有的POC都只写了verify
 * POC将会不定期更新
