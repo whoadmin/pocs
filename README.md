@@ -7,6 +7,9 @@
 * 主要方便工作中的漏洞验证
 * 有任何问题请Issue
 
+## 问题说明
+* 部分使用了socket包的POC如果无法验证漏洞是因为python2转python3的编码问题, python3的 socket.send()需要的是byte类型参数
+
 ## 使用方法
 请查看pocsuite3的官方文档
 
