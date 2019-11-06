@@ -15,6 +15,8 @@
 * 2019/10/28 提交php-fpm远程代码执行漏洞POC, 漏洞编号CVE-2019-11043
 * 2019/11/04 提交Kibana < 6.6.0 Timelion rce漏洞POC
 * 2019/11/05 提交Apache Solr <= 8.2.0 rce 漏洞POC
+* 2019/11/05 提交Zookeeper未授权访问漏洞POC
+* 2019/11/06 提交Zabbix 2.2 < 3.0.3 API JSON-RPC rce漏洞POC
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
