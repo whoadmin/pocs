@@ -29,9 +29,9 @@ class Zabbix(POCBase):
 
     def _options(self):
         o = OrderedDict()
-        o['username'] = OptString('', description='用户名', require=False)
-        o['password'] = OptString('', description='密码', require=False)
-        o['hostid'] = OptString('', description='主机id', require=False)
+        o['username'] = OptString('', description='username', require=False)
+        o['password'] = OptString('', description='password', require=False)
+        o['hostid'] = OptString('', description='hostid', require=False)
         return o
 
     def _headers(self):
