@@ -102,8 +102,8 @@ class Zabbix(POCBase):
                 result['VerifyInfo'] = {}
                 result['VerifyInfo']['URL'] = url
                 result['VerifyInfo']['Payload'] = payload
-        except Exception as e:
-            logger.info(e)
+        except:
+            pass
         return self.parse_output(result)
 
     def _attack(self):
