@@ -17,6 +17,7 @@
 * 2019/11/05 提交Apache Solr <= 8.2.0 rce 漏洞POC
 * 2019/11/05 提交Zookeeper未授权访问漏洞POC
 * 2019/11/06 提交Zabbix 2.2 < 3.0.3 API JSON-RPC rce漏洞POC
+* 2019/11/06 提交Zabbix 2.2 < 3.0.3 jsrpc 参数profileIdx2 insert注入漏洞POC
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
