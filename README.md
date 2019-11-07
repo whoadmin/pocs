@@ -23,6 +23,7 @@
 * 2019/11/06 提交Zabbix 2.2 < 3.0.3 jsrpc 参数profileIdx2 insert注入漏洞POC
 * 2019/11/06 提交Zabbix <= 4.4 验证绕过漏洞POC
 * 2019/11/06 提交Weblogic SSRF漏洞POC
+* 2019/11/06 提交Zabbix 2.2 < 3.0.3 latest SQL注入漏洞POC
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
