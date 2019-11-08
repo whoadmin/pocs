@@ -37,3 +37,4 @@
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
+* weblogic系列漏洞改写了 https://github.com/rabbitmask/WeblogicScan
