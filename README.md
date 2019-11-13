@@ -35,6 +35,7 @@
 * 2019/11/08 提交Weblogic wls-wsat协议反序列化rce漏洞POC, 漏洞编号CVE-2019-2725
 * 2019/11/08 提交Weblogic wls-wsat协议反序列化rce漏洞POC, 漏洞编号CVE-2019-2729
 * 2019/11/11 提交Java RMI 反序列化漏洞漏洞POC
+* 2019/11/13 提交phpmyadmin <= 2.11.9.1 rce漏洞POC
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
