@@ -11,7 +11,8 @@
 * 部分使用了socket包的POC如果无法验证漏洞是因为python2转python3的编码问题, python3的 socket.send()需要的是byte类型参数
 
 ## 使用方法
-请查看pocsuite3的官方文档[https://github.com/knownsec/pocsuite3]
+* 请查看pocsuite3的官方文档 
+[https://github.com/knownsec/pocsuite3]
 
 ## 更新日志
 * 2019/10/25 提交10个POC
@@ -39,6 +40,7 @@
 * 2019/11/13 提交Jenkins rce漏洞POC, 漏洞编号CVE-2018-1000861
 * 2019/11/14 提交Hadoop Yarn Rest API rce漏洞POC
 * 2019/11/14 提交Hadoop jstack pstack Servlet rce漏洞POC
+* 2019/11/15 提交Apache Flink 任意jar包上传rce漏洞POC
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
