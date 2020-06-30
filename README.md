@@ -42,6 +42,9 @@
 * 2019/11/14 提交Hadoop jstack pstack Servlet rce漏洞POC
 * 2019/11/15 提交Apache Flink 任意jar包上传rce漏洞POC
 * 2020/6/30  提交Nexus 3 任意修改admin密码越权漏洞POC, 漏洞编号CVE-2020-11444
+* 2020/6/30  提交Nexus Manager 3 远程命令执行漏洞POC, 漏洞编号CVE-2020-10204
+* 2020/6/30  提交Nexus Manager 3 远程命令执行漏洞POC, 漏洞编号CVE-2020-10199
+* 2020/6/30  提交Nexus Manager 3 远程命令执行漏洞POC, 漏洞编号CVE-2019-7238
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
