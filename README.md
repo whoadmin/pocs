@@ -47,6 +47,7 @@
 * 2020/6/30  提交Nexus Manager 3 远程命令执行漏洞POC, 漏洞编号CVE-2019-7238
 * 2020/6/30  提交Spring Expression Language SpEL 远程代码漏洞POC, 漏洞编号CVE-2018-1273
 * 2020/7/01  提交Apache Struts2 S2-057 远程代码执行漏洞POC, 漏洞编号CVE-2018-11776
+* 2020/7/01  提交Apache Struts2 S2-053 远程代码执行漏洞POC, 漏洞编号CVE-2017-12611
 
 ## 致谢
 * 感谢开放POC的所有大神, 感谢你们的默默奉献, 小弟沾你们的光了
